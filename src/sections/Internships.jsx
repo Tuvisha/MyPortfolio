@@ -15,7 +15,7 @@ export default function Internships(){
       <h2 className="text-2xl font-bold mb-6">Internships</h2>
       <div className="grid md:grid-cols-3 gap-4">
         {internships.map((i, idx) => (
-          <motion.div key={idx} className="p-4 rounded-lg shadow transition card-glass border border-gray-200 dark:border-gray-800"
+          <motion.div key={idx} className="p-4 rounded-lg shadow transition card-glass border border-gray-200 dark:border-gray-800 transform-gpu"
             initial="hidden" whileInView="show" viewport={{ once: true }} variants={card} whileHover="hover"
           >
             <div className="text-sm text-gray-400">{i.date}</div>

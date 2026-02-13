@@ -16,7 +16,7 @@ export default function Certifications(){
       <h2 className="text-2xl font-bold mb-6">Certifications & Achievements</h2>
       <ul className="space-y-3">
         {certs.map((c, i) => (
-          <motion.li key={i} className="p-3 rounded-lg card-glass border border-gray-200 dark:border-gray-800"
+          <motion.li key={i} className="p-3 rounded-lg card-glass border border-gray-200 dark:border-gray-800 transform-gpu"
             initial="hidden" whileInView="show" viewport={{ once: true }} variants={card} whileHover="hover"
           >{c}</motion.li>
         ))}

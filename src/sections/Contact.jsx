@@ -18,14 +18,14 @@ export default function Contact(){
             <div><strong>GitHub:</strong> <a href="https://github.com/TuvishaBabu" className="text-primary">/TuvishaBabu</a></div>
           </div>
         </motion.div>
-        <motion.form className="p-4 rounded-lg card-glass border border-gray-200 dark:border-gray-800 space-y-3"
+        <motion.form className="p-4 rounded-lg card-glass border border-gray-200 dark:border-gray-800 space-y-3 transform-gpu"
           initial="hidden" whileInView="show" viewport={{ once: true }} variants={card}
         >
-          <input className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700" placeholder="Your name" />
-          <input className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700" placeholder="Email" />
-          <textarea className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700" rows="5" placeholder="Message" />
-          <motion.button type="button" className="px-4 py-2 bg-primary text-white rounded-md"
-            whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }} transition={{ duration: 0.2 }}
+          <input className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Your name" />
+          <input className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Email" />
+          <textarea className="w-full p-2 rounded-md bg-transparent border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20" rows="5" placeholder="Message" />
+          <motion.button type="button" className="px-4 py-2 bg-primary text-white rounded-md shadow-md"
+            whileHover={{ y: -6 }} whileTap={{ scale: 0.96 }} transition={{ duration: 0.18 }}
           >Send Message</motion.button>
         </motion.form>
       </div>
