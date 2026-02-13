@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #f8fafc;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  @apply bg-[#f8fafc] text-gray-800 font-sans;
+}
+
+.dark body{
+  @apply bg-[#0b1020] text-gray-200;
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+}
+
+.card-glass {
+  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  backdrop-filter: blur(6px);
+  transition: background-color 0.45s ease, color 0.45s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle animated background gradient */
+body::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(800px 400px at 10% 10%, rgba(108,92,231,0.06), transparent 10%), radial-gradient(600px 300px at 90% 90%, rgba(0,184,148,0.04), transparent 10%);
+  animation: bgShift 18s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes bgShift {
+  0%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-20px) rotate(3deg); }
+  100%{ transform: translateY(0) rotate(0deg); }
+}
+
+/* Prefer reduced motion - minimize animations */
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* Smooth theme color transitions */
+html, body, .card-glass, nav, footer {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
